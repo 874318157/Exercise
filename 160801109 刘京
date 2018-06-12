@@ -1,0 +1,41 @@
++#!/bin/bash
++#test1
++cd ~
++touch message.txt
++mkdir ~/test
++mv message.txt another/
++cp another/message.txt .
++mv message.txt /tmp
++mv another/message.txt /tmp
++rm -r another
+
+
++#!/bin/bash
++#test2
++cd ~
++mkdir workbench
++touch workbench/readme.txt
++echo 1 >> workbench/readme.txt
++echo 2 >> workbench/readme.txt
++echo 3 >> workbench/readme.txt
++cat workbench/readme.txt
++ls > /workbench/list.txt
++wc -m /workbench/list.txt
+
+
++#!/bin/bash
++#test3
++man ls
++man man
++apropos calendar
++man cal
+
++#!/bin/bash
++#test4
++find . -name "*.png"
++find . -name "*hiking*" -delete
++
++mkdir txts
++mkdir pngs
++mv *.txt txts
++mv *.png pngs
